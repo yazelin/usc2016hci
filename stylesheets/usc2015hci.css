@@ -1,0 +1,27 @@
+.blockquote{
+	font-family: Microsoft JhengHei;
+	display:block;
+	font-size:18pt;
+	font-weight:900;
+	padding-left:50px;
+	padding-right:50px;
+	line-height:48px;
+	margin-bottom:12px;
+	margin-top:12px;
+}
+.blockquote::before {
+	content:"";
+	background-image:url("../images/lq.png");
+	height: 48px;
+	width: 48px;
+	position: absolute;
+	margin-left:-50px;
+}
+.blockquote::after {
+	background-image:url("../images/rq.png");	
+    content: "";
+	height: 48px;
+	width: 48px;
+	position: absolute;
+	margin-left:2px;
+}
