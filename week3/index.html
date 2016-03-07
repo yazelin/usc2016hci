@@ -55,6 +55,97 @@
 				<p>
 					Unity 遊戲引擎 請參考<a href="https://zh.wikipedia.org/wiki/Unity_(遊戲引擎)">維基百科</a>
 				</p>
+				
+				<h1>Unity + Vuforia AR (+NGUI)實機(Android)操作</h1>
+				<h3>前置作業</h3>
+				<ul>
+					<li>google信箱(註冊Unity及Vuforia帳號使用)</li>
+					<li>android手機或平板(實機安裝使用)</li>
+				</ul>
+				<h3>安裝(電腦教室已請學校安裝)</h3>
+				<ul>
+					<li>Unity 安裝 <a href="http://unity3d.com/get-unity/download?ref=personal">傳送門</a></li>
+					<li>Vuforia SDK 下載 <a href="https://developer.vuforia.com/downloads/sdk">傳送門</a></li>
+					<li>Android SDK <a href="http://developer.android.com/sdk/installing/index.html">傳送門</a></li>
+					<li>JDK <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">傳送門</a></li>
+				</ul>
+				<h3>實機操作-1 - Vuforia AR Android裝置(約15-20分鐘完成)</h3>
+				<ol>
+					<li>新建 Unity 專案 </li>
+					<li>設定 JDK 路徑與 Android SDK 路徑</li>
+					<li>使用 Vuforia Target Manager (辯識圖片可從這裡下載 <a href="./img/imagetarget.jpg">範例圖片</a>)</li>
+					<li>匯入已下載的 Vuforia 套件 import Vuforia SDK</li>
+					<li>使用 Vuforia Prefabs</li>
+					<li>設定 Vuforia 參數</li>
+					<li>加入 3D物件 (cube)</li>
+					<li>超迷你實用功能 - 攝影機輕點對焦 <a href="./share/scripts/CameraFocus.cs">下載</a></li>
+					<li>發佈 Android安裝檔 (Build)</li>
+					<li>實機安裝測試</li>
+				</ol>
+				
+					操作步驟影片：<br/>
+					<iframe src="https://www.youtube.com/embed/ud9u2I5wohU" frameborder="0" allowfullscreen></iframe>
+					<br/>
+					手機上執行的效果： <a href="https://www.youtube.com/watch?v=TnnaNeNgcMU">youtube 連結</a>
+				
+				<h3>實機操作-2 Vuforia 與 NGUI 由Unity Chan 來作示範(約25-30分鐘完成)</h3>
+				<h4>前置作業準備</h4>
+				<ol>
+					<li>接續上一個範例(Vuforia)的進度</li>
+					<li>下載 NGUI 從<a href="https://www.assetstore.unity3d.com/en/#!/content/2413">Unity Assets store ($95)</a> 或者 <a href="https://mega.nz/#!JQA2kACQ">試用一下</a>，!Wj9x4rTiYc_JxvG7uU1AM_7_tx6NjLL80rTky2TUXYc</li>
+					<li>匯入 NGUI package</li>
+					<li>匯入 範例素材package <a href="https://mega.nz/#!IMI2SQAa!T7ndTifNIWwEpy1cmsjuSayp1Ze34rNpGnobA812m_o">下載</a></li>
+					<li>匯入素材-超迷你實用功能 - NGUI 開啟網頁按鈕(<a href="./share/scripts/URLButtonScript.cs">範例</a>) 需要修改才能使用</li>
+					<li>匯入素材-超迷你實用功能 - NGUI 場景切換按鈕( AR 場景)(<a href="./share/scripts/ButtonScript.cs">範例</a>) 需要修改才能使用</li>
+					<li>Unity Assets store 下載免費素材 - Unity Chan</li>
+				</ol>
+				<h4>AR場景製作</h4>
+				<ol>
+					<li>新增 AR 場景(由前例中的Scene1另存)</li>
+					<li>設定 AR 場景 UI畫面寬高，並增加Menu背景及 返回 Main場景的 按鈕</li>
+					<li>在 AR 場景 AR物件使用 Unity Chan 替換原來的 Cube</li>
+					<li>設定 Unity Chan 的 角色控制器 及 取消表情Script</li>
+				</ol>
+				<h4>Main場景製作</h4>
+				<ol>
+					<li>新增 Main 場景(APP主畫面)</li>
+					<li>設定 Main 場景 UI畫面寬高</li>
+					<li>加入 Main 背景 (NGUI Texture) 、Menu背景 及 製作按鈕(Texture+BoxCollider+ButtonScript)</li>
+					<li>製作一個開啟 - <a href="https://www.facebook.com/UnityTechTaiwan">Unity taiwan FB粉絲團</a>的按鈕</li>
+				</ol>
+				<h4>測試</h4>
+				<ol>
+					<li>在電腦上測試 各個按鈕功能</li>				
+					<li>發佈 Android 安裝檔 (Build)</li>
+					<li>實機安裝測試</li>
+				</ol>
+				操作步驟影片：<br/>
+				<iframe src="https://www.youtube.com/embed/uBW73HM6lJI" frameborder="0" allowfullscreen></iframe>
+				<br/>
+				手機上執行的效果： <a href="https://www.youtube.com/watch?v=wgwNZbnR1Qo">youtube 連結</a>
+				
+				<h3>建議工具</h3>
+				<ul>
+					<li><a href="https://github.com/">GitHub</a> (推) 版本控制服務提供者</li>
+					<li><a href="https://docs.google.com">google doc</a> (推) 文件協作</li>
+					<li><a href="https://www.dropbox.com/">Dropbox</a> 雲端硬碟</li>
+					<li><a href="http://mega.co.nz/">MEGA</a> 雲端硬碟</li>
+					<li>如果沒有傳輸線，可以用send anywhere 手機上需先安裝send anywhere app<a href="https://send-anywhere.com/">pc端傳送門</a></li>
+					<li>還有很多很多哦 &hearts;	請上網找到後分享給大家 </li>
+				</ul>
+				<h3>相關資源</h3>
+				<ul>
+					<li>Android 手機或平板</li>
+					<li>Unity - <a href="http://unity3d.com/get-unity/download?ref=personal">傳送門</a></li>
+					<li>JAVA SDK - <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">傳送門</a></li>
+					<li>Android SDK - <a href="http://developer.android.com/sdk/index.html">傳送門</a></li>
+					<li>Vuforia SDK - <a href="https://developer.vuforia.com/downloads/sdk">傳送門</a></li>
+				
+					<li>Unity 其本介面操作(<a href="http://unity3d.com/learn/tutorials/topics/interface-essentials">官網影片</a>) </li>
+					<li>還有很多很多哦 &hearts;	請上網找到整理後分享給大家 </li>
+				</ul>
+				
+				
 				<h3>備註</h3>
 				<p>
 					第3週(02/22)內容為擴增實境AR，目的為讓同學可以做出AR效果的APP。
